@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>dss_station</name>
+  <version>0.0.0</version>
+  <description>TODO: Package description</description>
+  <maintainer email="liaochengo@qq.com">ros</maintainer>
+  <license>TODO: License declaration</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>dss_common</depend>
+  <depend>rclcpp</depend>
+  <depend>std_srvs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>tf2</depend>
+  <depend>tf2_msgs</depend>
+  <depend>OpenCV</depend>
+  <depend>orb_slam3</depend>
+  <!-- FFmpeg libraries -->
+  <depend>libavcodec-dev</depend>
+  <depend>libavformat-dev</depend>
+  <depend>libavutil-dev</depend>
+  <depend>libswscale-dev</depend>
+  <!-- TensorRT -->
+  <depend>tensorrt</depend>
+  <depend>cuda</depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

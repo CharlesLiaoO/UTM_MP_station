@@ -1,0 +1,11 @@
+launch:
+
+- node:
+    pkg: "dss_station"
+    exec: "dss_station"
+    name: "dss_station"
+    output: "screen"
+    param:
+      - name: "config_file"
+        value: "$(find-pkg-share dss_station)/config/stereo_camera.yaml"
+    # cwd: "$(find-pkg-share dss_station)/../bin/dss_station"  # may not ok

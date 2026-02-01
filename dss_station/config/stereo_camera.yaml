@@ -1,0 +1,85 @@
+%YAML:1.0
+
+# ORB-SLAM3 Stereo Camera Configuration
+
+File.version: "1.0"
+
+#--------------------------------------------------------------------------------------------
+# Camera Parameters
+#--------------------------------------------------------------------------------------------
+
+Camera.type: "PinHole"
+
+# Left Camera
+Camera1.fx: 403.824644
+Camera1.fy: 403.742954
+Camera1.cx: 310.556848
+Camera1.cy: 214.859328
+
+Camera1.k1: 0.05021855
+Camera1.k2: -0.02551311
+Camera1.p1: 0.00011062
+Camera1.p2: -0.00002967
+
+# Right Camera
+Camera2.fx: 403.260885
+Camera2.fy: 403.058995
+Camera2.cx: 321.750387
+Camera2.cy: 221.514256
+
+Camera2.k1: 0.06164138
+Camera2.k2: -0.08366952
+Camera2.p1: -0.00005878
+Camera2.p2: 0.00065571
+
+# Camera resolution
+Camera.width: 640
+Camera.height: 480
+
+# Color order of the images (0: BGR, 1: RGB. It is ignored if images are grayscale)
+Camera.RGB: 1
+
+# Camera frames per second
+Camera.fps: 10
+
+# Stereo baseline (meters)
+Stereo.b: 0.065535
+
+# Stereo baseline times fx
+Stereo.ThDepth: 26.464714
+
+# Transformation from right camera to left camera (T_c1_c2)
+Stereo.T_c1_c2: !!opencv-matrix
+   rows: 4
+   cols: 4
+   dt: f
+   data: [0.99999829, -0.00001378, -0.00184727, 0.06553516,
+          0.00001263, 0.99999981, -0.00062085, 0.00003677,
+          0.00184727, 0.00062082, 0.99999810, -0.00015700,
+          0.0, 0.0, 0.0, 1.0]
+
+#--------------------------------------------------------------------------------------------
+# ORB Parameters
+#--------------------------------------------------------------------------------------------
+
+# Indoor stereo optimization: increase feature points and reduce extraction threshold
+ORBextractor.nFeatures: 2500
+ORBextractor.scaleFactor: 1.2
+ORBextractor.nLevels: 8
+ORBextractor.iniThFAST: 12
+ORBextractor.minThFAST: 5
+
+#--------------------------------------------------------------------------------------------
+# Viewer Parameters
+#--------------------------------------------------------------------------------------------
+
+Viewer.KeyFrameSize: 0.05
+Viewer.KeyFrameLineWidth: 1.0
+Viewer.GraphLineWidth: 0.9
+Viewer.PointSize: 2.0
+Viewer.CameraSize: 0.08
+Viewer.CameraLineWidth: 3.0
+Viewer.ViewpointX: 0.0
+Viewer.ViewpointY: -0.7
+Viewer.ViewpointZ: -1.8
+Viewer.ViewpointF: 500.0
